@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt_BR"><head><title>ISPMan</title>
+	
+	<meta name="generator" content="Albatross!">
+	<meta name="author" content="Osvaldo Santana Neto <osvaldo@rantac.com.br>">
+	<link rel="StyleSheet" href="bug.css" type="text/css">
+	<script language="JavaScript" src="bug.js"></script></head>
+
+
+<body>
+<table cellspacing="0" cellpadding="0" width="100%"><tbody><tr>
+	<!-- Menu Principal -->
+	<td class="userinfo"> </td><td class="userinfo"> </td><td class="userinfo"> </td><td class="userinfo"> </td><td class="userinfo"> </td><td class="userinfo"> </td><td width="100%" align="right" rowspan="2" class="mainmenutitle" valign="top">ISPMan / <img src="imagens/rantac.gif" border="0"></td>
+	</tr><tr class="mainmenubar">
+		<td class="mainmenu"> </td>
+		<td class="mainmenu1"><a href="http://localhost/ispman/index.cgi?acao=principal" class="mainmenulink">Principal</a></td><td class="mainmenu0"><a href="http://localhost/ispman/index.cgi?acao=cliente" class="mainmenulink">Clientes</a></td><td class="mainmenu0"><a href="http://localhost/ispman/index.cgi?acao=financeiro" class="mainmenulink">Financeiro</a></td><td class="mainmenu0"><a href="http://localhost/ispman/index.cgi?acao=administrativo" class="mainmenulink">Administrativo</a></td><td class="mainmenu0"><a href="http://localhost/ispman/index.cgi?acao=operacional" class="mainmenulink">Operacional</a></td></tr></tbody></table>
+
+	<!-- Informações sobre usuário -->
+	<table border="0" cellspacing="5" cellpadding="0" width="100%"><tbody><tr>
+		<td align="left" class="userinfo" nowrap="nowrap">
+			Administrador / 
+			Administrador do Sistema / 
+			Rantac Matriz</td>
+		<td align="right" class="userinfo" width="100%"><a class="userinfo" href="http://localhost/ispman/?acao=logout">logout</a></td>
+	</tr></tbody></table>
+	
+	<!-- Barra de Tarefas -->
+	<form method="get" action="index.cgi"><table border="0" cellpadding="1" cellspacing="1" width="100%" class="toolbar"><tbody><tr class="toolbar">
+		<td class="tool" onmouseover="javascript:tool_over(this)" onmouseout="javascript:tool_out(this)" width="26" valign="center" align="center"><a class="toollink" href="http://localhost/ispman/?acao=principal&amp;comando=novo"><img src="imagens/new.gif" align="middle" border="0" alt="Novo"></a></td>
+		<td class="tool" valign="center" align="right" nowrap="nowrap"><img src="imagens/search.gif" align="middle" border="0" alt="Procurar"> <input type="text" name="procurar" size="30" class="miniok"> <select name="coluna" class="miniok"><option value="nome">Nome</option><option value="endereco">Endereço</option><option value="contato">Contato</option><option value="documento">Documento</option></select> <input type="submit" name="comando" value="ok" class="miniok"> <a class="toollink" href="http://localhost/ispman/?acao=principal&amp;comando="><img src="imagens/clear.gif" align="middle" border="0" alt="Limpa Busca"></a></td>
+	</tr></tbody></table></form>
+	<input type="checkbox" onclick="javascript:dsp(1, this.checked)" checked="checked"> Nome <input type="checkbox" onclick="javascript:dsp(2, this.checked)" checked="checked"> Endereço <input type="checkbox" onclick="javascript:dsp(3, this.checked)" checked="checked"> Contato <input type="checkbox" onclick="javascript:dsp(4, this.checked)" checked="checked"> Documento <table border="0" cellpadding="2" cellspacing="0" width="100%" class="listtable">
+		<tbody><tr class="listhead">
+			<td width="1" class="listhead">Opções</td>
+			<td class="dsp1" nowrap="nowrap">Nome</td>
+			<td class="dsp2" nowrap="nowrap">Endereço</td>
+			<td class="dsp3" nowrap="nowrap">Contato</td>
+			<td class="dsp4" nowrap="nowrap">Documento</td>
+			</tr>
+		<tr class="line1"><td class="line1" nowrap="nowrap"><a href="http://localhost/ispman/index.cgi?acao=principal&amp;comando=editar&amp;id=1"><img src="imagens/edit.gif" border="0"></a> <a href="http://localhost/ispman/index.cgi?acao=principal&amp;comando=apagar&amp;id=1"><img src="imagens/delete.gif" border="0"></a></td>
+			<td class="dsp1">Osvaldo Santana Neto</td>
+			<td class="dsp2">Rua Wolgran Junqueira Ferreira, 269 Apto. 2</td>
+			<td class="dsp3">Fone Residencial 19-3666-6666</td>
+			<td class="dsp4">CPF 15931451870</td>
+			</tr>
+		<tr class="line0"><td class="line0" nowrap="nowrap"><a href="http://localhost/ispman/index.cgi?acao=principal&amp;comando=editar&amp;id=2"><img src="imagens/edit.gif" border="0"></a> <a href="http://localhost/ispman/index.cgi?acao=principal&amp;comando=apagar&amp;id=2"><img src="imagens/delete.gif" border="0"></a></td>
+			<td class="dsp1">BFCR Ltda.</td>
+			<td class="dsp2">Praça Central, 123 bla</td>
+			<td class="dsp3">Fone Comercial 19-6666-6666</td>
+			<td class="dsp4">CNPJ 123456789000112</td>
+			</tr>
+		</tbody></table>
+</body></html>

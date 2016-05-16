@@ -1,0 +1,235 @@
+body {
+	color: white;
+	background-color: black;
+	font-family: sans-serif;
+	font-size: 10pt;
+}
+
+.mainmenutitle {
+	color: white;
+	background-color: black;
+	font-family: sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+	border-bottom: 2px solid #0040A0;	
+}
+
+.mainmenu {
+	border-bottom: 2px solid #0040A0;	
+}
+
+.mainmenu0 {
+	color: white;
+	background-color: #0040A0;
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 2px solid #0040A0;	
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #004060;
+}
+
+.mainmenu1 {
+	color: white;
+	background-color: #0080FF;
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid #0040A0;	
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #004060;
+}
+
+.mainmenulink {
+	color: white;
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.screentitle {
+	color: white;
+	background-color: black;
+	font-family: sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.title {
+	color: white;
+	background-color: black;
+	font-family: sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+	text-align: right;
+}
+
+.loginfield {
+	color: black;
+	font-family: sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: right;
+}
+
+.logintitle {
+	color: white;
+	background-color: #0040A0;
+	font-family: sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.loginerror {
+	color: red;
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.logintable {
+	color: black;
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	border: 2px solid #0040A0;
+	
+}
+
+.loginmaintable {
+	margin-top: 70px;
+}
+
+.userinfo {
+	color: white;
+	font-family: sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	text-align: right;
+}
+
+.miniok {
+	font-size: 8pt;
+}
+
+
+.section {
+	color: white;
+	background: #0040A0;
+	font-family: sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	padding-left: 14pt;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-bottom: 1px solid #004060;
+	border-right: 1px solid #004060;
+}
+
+.listtable {
+	border-left: 2px solid #0040A0;
+	border-top: 2px solid #0040A0;
+	border-bottom: 2px solid #0040A0;
+	border-right: 2px solid #0040A0;
+}
+
+.listhead {
+	color: white;
+	background: #0040A0;
+	font-weight: bold;
+	font-size: 9pt;
+}
+
+.line0 {
+	color: black;
+	background: #F0F0F0;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.line1 {
+	color: black;
+	background: white;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.toolbar {
+	color: black;
+	background: #D0D0D0;
+	border-left: 2px solid white;
+	border-top: 2px solid white;
+	border-right: 2px solid #808080;
+	border-bottom: 2px solid #808080;
+}
+
+.tool {
+	border-left: 1px solid #D0D0D0;
+	border-top: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0;
+	border-right: 1px solid #D0D0D0;
+}
+
+.toollink {
+	color: black;
+	font-family: sans-serif;
+	font-size: 9pt;
+	text-decoration: none;
+}
+
+
+/* visibles */
+dsp1 { display: inline; }
+dsp2 { display: inline; }
+dsp3 { display: inline; }
+dsp4 { display: inline; }
+dsp5 { display: inline; }
+dsp6 { display: inline; }
+dsp7 { display: inline; }
+dsp8 { display: inline; }
+dsp9 { display: inline; }
+dsp10 { display: inline; }
+dsp11 { display: inline; }
+dsp12 { display: inline; }
+dsp13 { display: inline; }
+dsp14 { display: inline; }
+dsp15 { display: inline; }
+dsp16 { display: inline; }
+dsp17 { display: inline; }
+dsp18 { display: inline; }
+dsp19 { display: inline; }
+dsp20 { display: inline; }
+
+/* invisibles */
+dsp21 { display: none; }
+dsp22 { display: none; }
+dsp23 { display: none; }
+dsp24 { display: none; }
+dsp25 { display: none; }
+dsp26 { display: none; }
+dsp27 { display: none; }
+dsp28 { display: none; }
+dsp29 { display: none; }
+dsp30 { display: none; }
+dsp31 { display: none; }
+dsp32 { display: none; }
+dsp33 { display: none; }
+dsp34 { display: none; }
+dsp35 { display: none; }
+dsp36 { display: none; }
+dsp37 { display: none; }
+dsp38 { display: none; }
+dsp39 { display: none; }
+dsp40 { display: none; }
+

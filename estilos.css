@@ -1,0 +1,58 @@
+/*
+    Estilo
+    vim:ts=4:et
+*/
+
+a:hover   {
+    text-decoration: underline;
+}
+
+a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+pre {
+    font-size: 12pt;
+    font-family: courier new,monospace;
+    color: #00DD00;
+}
+
+img {
+    border: 0px;
+}
+
+b {
+  color: #00FF00;
+}
+
+body { color: #00BB00;
+       font-family: arial,helvetica,sans-serif;
+       background: url(bg.png) fixed;
+}
+
+td { color       : #00BB00;
+       font-family : arial,helvetica,sans-serif;
+       font-size   : 11px
+}
+th { color       : #00FF00;
+       font-family : arial,helvetica,sans-serif;
+       font-size   : 11px
+}
+p {
+    color       : #00BB00;
+    font-family : arial,helvetica,sans-serif;
+}
+
+h1 { font-size   : 20px;
+       font-family : monospace;
+       font-weight : bold;
+       font-style  : normal;
+       color       : #00FF00;
+       text-align : center;
+     }
+
+.blink {
+    text-decoration: blink;
+    color: #FFFF00;
+}

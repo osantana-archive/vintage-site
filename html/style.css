@@ -1,0 +1,30 @@
+body	{ background-color : #FFFFFF }
+p		{ color : #000000; font-size : normal; font-family : sans-serif }
+li		{ color : #000000; font-size : normal; font-family : sans-serif }
+a		{ color : #0000A0; }
+
+/* heading styles */
+h1		{ color : #0000A0; font-family : sans-serif; font-size : xx-large }
+h2		{ color : #000000; font-family : sans-serif; font-size : x-large }
+h3		{ color : #000000; font-family : sans-serif; font-size : large }
+
+/* CSS LaTeX2HTML */
+.MATH    { font-family: "Century Schoolbook", serif; }
+.MATH I  { font-family: "Century Schoolbook", serif; font-shape: italic }
+.BOLDMATH { font-family: "Century Schoolbook", serif; font-weight: bold }
+
+/* implement both fixed-size and relative sizes */
+SMALL.XTINY		{ font-size : xx-small }
+SMALL.TINY		{ font-size : x-small  }
+SMALL.SCRIPTSIZE	{ font-size : smaller  }
+SMALL.FOOTNOTESIZE	{ font-size : small    }
+SMALL.SMALL		{  }
+BIG.LARGE		{  }
+BIG.XLARGE		{ font-size : large    }
+BIG.XXLARGE		{ font-size : x-large  }
+BIG.HUGE		{ font-size : larger   }
+BIG.XHUGE		{ font-size : xx-large }
+
+/* mathematics styles */
+DIV.displaymath		{ }	/* math displays */
+TD.eqno			{ }	/* equation-number cells */

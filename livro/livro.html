@@ -1,0 +1,566 @@
+<html>
+<head>
+   <title>aCiDBaSe HoMe PaGe</title>
+</head>
+
+<style>
+   h1   { font-size: 18pt; font-family: Verdana, Arial, Helvetica; font-weight: bold; text-decoration: none; }
+   h2   { font-size: 16pt; font-family: Verdana, Arial, Helvetica; font-weight: bold; text-decoration: none; }
+   h3   { font-size: 14pt; font-family: Verdana, Arial, Helvetica; font-weight: normal; text-decoration: none; }
+   h4   { font-size: 12pt; font-family: Verdana, Arial, Helvetica; font-weight: bold; text-decoration: none; }
+   p    { font-size: 10pt; font-family: Verdana, Arial, Helvetica; font-weight: normal; text-decoration: none; }
+   td   { font-size: 10pt; font-family: Verdana, Arial, Helvetica; font-weight: normal; text-decoration: none; }
+   body { font-size: 10pt; font-family: Verdana, Arial, Helvetica; text-decoration: none; }
+   .aviso { font-size: 10pt; font-family: Verdana, Arial, Helvetica; font-weight: bold; text-decoration: none; color : red;}
+   .legenda { font-size: xx-small; font-family: Verdana, Arial, Helvetica; font-weight: normal; text-decoration: none; }
+   a:visited { color: #800080}
+   a:hover   { text-decoration: underline }
+   pre { font-size : 12px; font-family : monospace; font-weight : normal; font-style : normal; color : White; }
+</style>
+
+<body bgcolor="black" text="white">
+<pre>
+                                  xx
+                         xxxx     xx    xxxx    xxxxx            xxxx
+                        xx  xx          xx xx   xx  xx          xx  xx
+                 xxxx   xx  xx  xxxx    xx  xx  xx  xx   xxxx   xx       xxxx
+                    xx  xx        xx    xx  xx  xx  xx      xx   xx     xx  xx
+                    xx  xx        xx    xx  xx  xxxxx       xx    xx    xx  xx
+                 xxxxx  xx        xx    xx  xx  xx  xx   xxxxx     xx   xxxxxx
+                xx  xx  xx  xx    xx    xx  xx  xx  xx  xx  xx      xx  xx
+                xx  xx  xx  xx    xx    xx xx   xx  xx  xx  xx  xx  xx  xx
+                 xxxxx   xxxx   xxxxxx  xxxx    xxxxx    xxxxx   xxxx    xxxx
+
+                 H      o      M      e                P      a      G      e
+
+</pre>
+
+<H1>Sequ&ecirc;ncia de cap&iacute;tulos para o livro</H1>
+<OL>
+	<LI>Introdu&ccedil;&atilde;o</LI>
+	<OL>
+		<LI>Escolha do tipo de jogos</LI>
+		<LI>Etapas da cria&ccedil;&atilde;o de um jogo</LI>
+		<LI>Escolha das Ferramentas de Desenvolvimento</LI>
+	</OL>
+	<LI>Criando um Jogo</LI>
+	<OL>
+		<LI>As ferramentas</LI>
+		<UL>
+			<LI>Linguagem C e Linux - Compilando um programa</LI>
+			<LI>Bibliotecas - Allegro e SVGAlib</LI>
+		</UL>
+		<LI>V&iacute;deo</LI>
+		<UL>
+			<LI>Introdu&ccedil;&atilde;o, conceitos e defini&ccedil;&otilde;es</LI>
+			<LI>Alternando entre modos de v&iacute;deo</LI>
+			<LI>Escrevendo no v&iacute;deo</LI>
+		</UL>
+		<LI>&Aacute;udio</LI>
+		<UL>
+			<LI>Introdu&ccedil;&atilde;o, conceitos e defini&ccedil;&otilde;es</LI>
+			<LI>Tocando m&uacute;sica MIDI</LI>
+			<LI>Tocando samplers digitais</LI>
+		</UL>
+		<LI>Estrutura</LI>
+		<UL>
+			<LI>Estruturas mais comuns</LI>
+			<LI>Estruturando jogos</LI>
+		</UL>
+	</OL>
+	<LI>Partindo para a Pr&aacute;tica</LI>
+	<OL>
+		<LI>O jogo NIBBLES</LI>
+		<LI>Estrutura</LI>
+		<LI>Funcionando</LI>
+		<LI>Melhorando</LI>
+		<UL>
+			<LI>Acrescentando M&uacute;sica</LI>
+			<LI>Acrescentando Sons</LI>
+			<LI>Criando uma abertura</LI>
+		</UL>
+		<LI>Exerc&iacute;cios :)</LI>
+		<UL>
+			<LI>Acrescentar suporte a fases</LI>
+			<LI>Acrescentar suporte a dois (ou mais) jogadores</LI>
+			<LI>Acrescentar Hall da Fama com as melhores pontua&ccedil;&otilde;es</LI>
+			<LI>Acrescentar Itens a essa lista de exerc&iacute;cios :)</LI>
+		</UL>
+	</OL>
+</OL>
+
+<center><h1>Jogos - Jogar quase tudo fora :(</h1></center>
+<h2>Uma breve história do tempo</h2>
+<h3>Porque o homem brinca</h3>
+
+<p>Muitos estudiosos já pesquisaram a influência dos jogos na sociedade em que vivemos,
+mas foi o historiador Johan Huizinga, autor do livro Homo ludens (Homem lúdico), quem melhor
+explicou esse fenômeno: longe de ser apenas uma entre outras atividades da vida civilizada,
+o jogo se encontra na própria raiz da cultura e é mais antigo que ela.
+
+<p>Assim, jogamos ou competimos por algo mais que a honra ou um prêmio material.
+A essência do espírito lúdico, segundo Huizinga, é ousar, correr riscos, superar a incerteza,
+descarregar a tensão, relaxar. Para os humanos, o jogo ultrapassa os limites de uma atividade
+puramente física, transcende as necessidades práticas da vida cotidiana.
+
+
+<h3>Os jogos eletrônicos</h3>
+
+<p>Mexendo em seu microcomputador, meio de brincadeira, um jovem gênio da informática,
+descobre como entrar em contato com os computadores do serviço de Defesa norte-americana e,
+para desespero dos generais, interfere justamente no código que revela como enfrentar os
+soviéticos em possível guerra nuclear.
+
+<p>Este é o tema do filme Jogos de Guerra (Wargames). Baseada na enorme difusão dos jogos
+eletrônicos de computador e na crescente sofisticação dos micros, a história mostra a
+correlação entre a atividade lúdica, o faz-de-conta e a vida real.
+
+<h3>Os Adventures</h3>
+
+<p>Para explicar melhor o que s&atilde;o os jogos do tipo adventure (aventura), poderemos compar&aacute;-los a
+filmes. Quando voc&ecirc; assiste um filme, voc&ecirc; v&ecirc; a vis&atilde;o linear da hist&oacute;ria contada
+pelo diretor, j&aacute; quando voc&ecirc; joga um adventure, voc&ecirc; cria a sequencia da hist&oacute;ria interagindo com
+os personagens do jogo atrav&eacute;s de comandos pr&eacute;-definidos. O que difere os adventures dos jogos do tipo RPG, e o
+fato que no adventure, voc&ecirc; d&aacute; as instru&ccedil;&otilde;es para um personagem realizar determinada tarefa
+enquanto no RPG, voc&ecirc; e o personagem do jogo.
+
+<h4>De 'The Hobbit' &agrave; 'Grim Fandango'</h4>
+
+<p>Antigamente os jogos do tipo adventure utilizavam-se apenas de textos para descrever os cen&aacute;rios e as
+hist&oacute;rias, j&aacute; hoje em dia utilizam a tecnologia das placas aceleradoras 3D. Irei dar uma mostra da
+evolu&ccedil;&atilde;o que os jogos adventure v&ecirc;m sofrendo nos &uacute;ltimos anos.
+
+<p><b>Adventures Texto</b> - Estes jogos normalmente eram desenvolvidos por universit&aacute;rios e hobbystas de
+programa&ccedil;&atilde;o, e eram feitos aos milhares, pois sua programa&ccedil;&atilde;o era relativamente f&aacute;cil,
+e a &uacute;nica coisa realmente necess&aacute;ria era um bom roteiro.
+<p><b>The Hobbit</b> - Foi um dos primeiros adventures gr&aacute;ficos existentes. Foi lancado para TK95 e contava uma
+hist&oacute;ria de J.R.R. Tolkien (autor de o Senhor dos An&eacute;is) onde o personagem principal (Bilbo) fazia uma viagem
+ao centro da terra para encontrar um drag&ailde;o e um tesouro. As a&ccedil;&otilde;es eram fornecidas atrav&eacute;s do
+teclado sempre na forma "VERBO+OBJETO" da seguinte maneira: PEGAR ANEL, ABRIR PORTA, IR NORTE, etc...
+<p><b>Maniac Mansion</b> - Na minha opini&atilde;o foi o mais revolucionador dos adventures, era gr&aacute;fico, e as
+a&ccedil;&otilde;es eram selecionadas atrav&eacute;s de um painel que poderia ser ativado por um mouse ou atrav&eacue;s de
+atalhos do teclado. Foi adaptado para consoles de videogames e para diversas plataformas de computador.
+<p><b>Indiana Jones and the Fate of Atlantis</b> - A hist&oacute;ria desse jogo seria na verdade mais uma
+continua&ccedil;&atilde;o da s&eacute;rie de filmes do explorador Indiana Jones, mas por falta de produtores ele
+foi produzido como um jogo adventure.
+<p><b>Sam & Max</b> - Deixou de usar as a&ccedil;&otilde;es selecionadas atrav&eacute;s de um painel e as substituiu por
+comandos de mouse. 
+<p><b>The Dig</b> - A hist&oacute;ria desse jogo foi criada por nada menos que Steven Spielberg, e foi lan&ccedil;do apenas
+para computador pois os seus altos custos inviabilizaram a sua produ&ccedil;&atilde;o para o cinema.
+<p><b>Monkey Island III</b> - Inovador apenas no aspecto da computa&ccedil;&atilde;o gr&aacute;fica, iniciou o uso de tela
+cheia para os gr&aacute;ficos dos jogos. Foi tamb&eacute;m a terceira continua&ccedil;&atilde;o da mais bem-sucedida
+s&eacute;rie de adventures da Lucasart.
+<p><b>Grim Fandango</b> - O primeiro adventure a se utilizar dos recursos proporcionados pelas placas aceleradoras 3D conta
+uma lenda mexicana. Tamb&eacute;m foi produzido pela Lucasart.
+
+<h4>Lucasart</h4>
+
+<p>Decidi dedicar uma parte desse livro para falar sobre essa que considero a melhor produtora de jogos adventure do
+momento. Deixarei que seu hist&oacute;rico produ&ccedil;&otilde;es mostre o porque disso.
+<ul>
+<li>Maniac Mansion
+<li>Zak McCraken
+<li>Monkey Island
+<li>Indiana Jones and the Last Cruzade
+<li>Loom
+<li>Indiana Jones and the Fate of Atlantis
+<li>Monkey Island II
+<li>Sam&Max
+<li>Full Throttle
+<li>The Day of Tentacle (Maniac II)
+<li>The Dig
+<li>Monkey Island III
+<li>Grim Fandango
+</ul>
+
+<p>Com um curriculo desse &eacute; necess&aacute;rio dizer algo mais?
+
+<h4>O Adventure no Brasil</h4>
+
+<p>Ultimamente a produ&ccedil;&atilde;o de adventure, ou melhor, de todos os tipos de jogos no Brasil anda meio devagar, mesmo
+vendo esfor&ccedil;os de alguns grupos e empresas que ainda se dedicam a essa arte. O &uacute;ltimo adventure nacional
+lan&ccedil;ado no mercado na d&eacute;cada de 80 foi Amaz^ocirc;nia de Renato Degiovani. Ele foi produzido quando ainda
+existiam programadores nacionais que produziam software de qualidade e que faziam isso muitas vezes por amor &agrave; arte
+e n&atilde;o pra engordar seus cofrinhos. Os jogos nacionais de maior import^acirc;ncia foram:
+
+<ul>
+<li>Angra
+<li>Amazonia
+<li>Incidente em Varginha I e II
+<li>Outlive
+</ul>
+
+<h2>O que nos leva a criar um jogo?</h2>
+
+<p clas="aviso">Terminar
+
+<hr>
+
+<center><h1>Criando um Adventure</h1></center>
+<h2>Fundamentos Básicos</h2>
+<h3>Criando um jogo</h3>
+
+<p>Nessa parte do livro, descreverei detalhadamente todos os processos necessários na
+criação de um adventure. Dividi essa parte do livro em fases para facilitar a compreensão de
+tudo o que é necessário para se desenhar bons jogos. É claro que, dependendo do tamanho do
+jogo, poderemos pular determinadas etapas desse processo, mas recomendo que elas sejam
+seguidas uma a uma sem atropelos, para que seu jogo fique bem estruturado.
+
+<h4>Esponja Cultural</h4>
+
+É assim que o criador de jogos deve ser, uma esponja cultural. Ele deve se informar,
+sem exagero algum, sobre TUDO. Ele deve saber sobre filmes, teatro, música, HQ, RPG,
+infomática, jogos, esportes, notícias, artes, dança, filosofia, humor, história, etc, etc e
+bota etc nisso.
+
+<p>Isso tudo é necessário, porque é daí que inicia (muitas vezes sem querer), a próxima
+etapa da construção de um jogo: a Idéia. Sabendo sobre muito sobre essas coisas, você
+estará criando possibilidades para que as boas idéias cheguem.
+
+<p>No Apendice A coloquei algumas dicas para se obter informações sobre os itens acima citados.
+
+<h4>Idéia e Concepção do Jogo</h4>
+
+<P>Essa sem dúvida é a parte mais importante na criação de um jogo. Todo bom jogo começa
+com uma boa idéia, mas isso não quer dizer que boas idéias sempre se transformem em bons jogos.
+Tudo vai depender da maneira de como iremos trabalhar essas idéias nas estapas seguintes.
+
+<P>Certas idéias irão demandar também um certo trabalho de pesquisa. Como é o caso de jogos
+que acontecem em períodos históricos, ou que se utilizem de lendas de uma determinada
+civilização. Os métodos de pesquisa devem explorar os mais diversos aspectos que possam ser
+usados em seu jogo. Como exemplo poderiamos estar criando um jogo do tipo adventure que se
+passe na época do antigo egito, saberemos que não seria uma boa idéia colocar um gato sendo
+morto, pois os gatos eram animais sagrados para essa civilização.
+
+<P>Se estivermos escrevendo um roteiro de uma aventura passada no futuro, poderemos colher
+idéias em filmes, livros ou até mesmo pela TV. Já se estivermos escrevendo uma aventura no
+espaço poderemos fazer uma pesquisa científica, para que detalhes como a falta de
+gravidade e o vácuo não fiquem de fora das ações de nossos personagens.
+
+<P>Ao mesmo tempo, também não devemos ficar amarrados a certos detalhes do tipo: o som
+não se propaga no vazio do espaço, porque senão os lasers de nossas naves não irão emitir
+ruído algum, e isso realmente tornaria o jogo um pouco chato.
+
+<P>Sempre que tiver uma boa idéia para um jogo, anote-a rapidamente num pedaço de papel para
+que todos os detalhes dela ainda estejam vivos em sua memória.
+
+<P>Na concepção do jogo, definiremos como nosso jogo ficará no computador. Portanto é aqui
+que vamos ver o tipo de jogo e a ambientação que ele terá.
+
+<P><b>Tipos de jogos</b></P>
+
+<UL>
+   <LI><b>Aventura (ou Adventure)</b> - Nesse tipo de jogo, o personagem será comandado
+       pelo jogador para desempenhar as mais diversas tarefas, como por exemplo:
+       investigar, andar, atirar, examinar entre outras coisas. Uma variação para esse tipo
+       de jogo é o RPG para computadores. Descendentes dos RPG (Role Playing Games - Jogo de
+       interpretação de papéis), essas variantes dos jogos adventures são versões com mais
+       detalhes e com regras adaptadas de manuais de  RPG. Será também o tipo de jogo que esse
+       livro irá focar.
+   <LI><b>Tabuleiro</b> - Normalmente são os tradicionais jogos de tabuleiros adaptados para
+       o computador como a Dama, o Xadrez e o Gamão. Incluo nesse grupo também os jogos de
+       cartas, pois normalmente são apenas reproduções de jogos de cartas já conhecidos.
+   <LI><b>Educativos</b> - São jogos cuja finalidade é a de ensinar. Estes jogos são muito
+       utilizados em escolas, para desenvolver o raciocínio, lógica e reflexo de crianças.
+   <LI><b>Arcades</b> - Normalmente são jogos onde os reflexos são fundamentais. Esses jogos
+       normalmente apresentam um personagem que é comandado pelo jogador com comandos simples
+       de direção e tiro. Para citar alguns jogos dessa categoria: Sonic, Super Mario Bros,
+       River Raid, Seaquest entre outros. Incluo nessa categoria os jogos do tipo fliperama
+       (Pinball).
+   <LI><b>Estratégia</b> - São jogos que demandam a elaboração de estratégias e a utilização
+       de raciocínio para se chegar à vitória. Nesses jogos você pode ser o comandante de um
+       exército, um prefeito de uma cidade ou até mesmo uma raça alienígena que quer conquistar
+       o universo. O que manda nesse tipo de jogo é a correta utilização de recursos (tropas,
+       dinheiro de impostos, vermes alienígenas) para se ganhar.
+   <LI><b>Simuladores</b> - Inicialmente foram criados para fins práticos como o treinamento
+       de pilotos de aeronaves. Hoje são usados para divertir desde os futuros pilotos de
+       Fórmula 1 até pilotos de caça em horas de folga.
+   <LI>Ação - São uma mistura de jogos Adventure com jogos Arcades. Jogos como Duke Nukem,
+       Wolfenstein, Quake e Tomb Raider se encaixam nessa categoria. São jogos que apresentam
+       um objetivo básico, e que permite que o jogador comande o personagem de várias maneiras.</LI></UL>
+
+<P>Tendo em mãos todas essas informações podemos definir como ficará nosso jogo.
+
+<h4>Elaboração da Idéia / Roteirização</h4>
+
+<P>Neste ponto teremos em mãos: Uma idéia (que pode estar numa sinopse básica), materiais de
+pesquisa necessários e uma visão geral de como o jogo irá ficar quando pronto. Devemos
+agora partir para o detalhamento dessas informações, e no caso de alguns jogos (como o
+adventure por exemplo) a elaboração dos roteiros.
+
+<P>Evidentemente se nosso jogo for apenas um jogo da velha ou um jogo simples de tabuleiro,
+não é necessário uma roteirização, pois já se conhece regras e funcionamento dos mesmos.
+Agora se seu jogo da velha for trabalhar com IA (Inteligência Artificial) a situação muda,
+e um projeto bem feito pode lhe poupar muito trabalho no futuro.
+
+<p><b>Roteirização Básica</b>
+
+<P>Chegou a hora de você contar toda a sua história, de maneira simples. Nessa etapa não é
+necessário descrever como ficará o jogo em detalhes, mas é necessário que façamos as
+separações de fase, a história da aventura. Aqui também entra a descrição de todos os
+personagens da história. Escreva essa parte como se estivesse escrevendo um conto (ou um
+best-seller se preferir). Descrições detalhadas de personagens, cenários, cenas e diálogos
+não entram nesse roteiro porque farão parte do roteiro detalhado.
+
+<P>Depois de pronta essa roteirização o próximo passo é entregá-lo a algum amigo, parente
+ou pai para que eles dêem uma lida e opinem sobre os diversos aspectos da história. Depois
+que você recolher diversas opiniões, deverá então partir para a revisão do roteiro onde as 
+falhas deverão ser corrigidas.
+
+<p><b>Definição Básica de Personagens</b>
+
+<P>Aqui deveremos criar a "personalidade" de nossos personagens. Utilizarei aqui as siglas
+PC e NPC que significam respectivamente <i>Player Character</i> (Personagem Jogador) e 
+<i>Non-player Character</i> (Personagem não jogador). Essas siglas foram herdadas dos Jogos
+de RPG. Os PC's são os personagens que são controlados (ou no caso do RPG interpretados) pelo
+jogador, enquanto os NPC's são controlados pelo computador (ou pelo mestre de jogos no caso
+do RPG). 
+
+<P>Devemos descrever, nessa etapa da criação do adventure, como cada um dos personagens se 
+apresentará em nossa história e como ele se comportaria em determinadas situações. Exemplo:
+
+<ul>
+   <li><b>Asterix</b> - Personagem baixinho e bigodudo. É inteligente e astuto, quando toma
+       a poção mágica do Panoramix ele fica muito forte e briga com os soldados romanos. Tem
+       como amigo inseparável o personagem Obelix.
+   <li><b>Obelix</b> - Personagem grandão, bigodudo e gordo (mesmo negando isso o tempo todo).
+       Caiu no calderão de poção mágica quando criança tornando o efeito dela permanente pra
+       ele. Ele vende menires e é dono do cãozinho Idéiafix, seu amigo insepar&aacute;vel.
+</ul>
+
+<p>Para facilitar podemos criar algumas fichas de personagens. Nessas fichas você pode 
+designar atributos básicos como Força, Inteligência, Vitalidade, Sorte, Destreza e algumas
+peculiaridades. É claro que um desenho do mesmo ajudará.
+
+<p><b>Roteirização Avançada</b>
+
+<P>Terminada a roteirização básica, começaremos a roteirização avançada. Esse roteiro incluirá
+as descrições de cenários, as falas dos personagens, a ambientação das cenas, entre outras
+informações mais detalhadas. Para auxiliar nessa fase temos uma ferramenta muito interessante
+utilizada por produtores de vídeo que se chama Storyboard. 
+
+<p><table border="1" cellpadding="0" cellspacing="0"><tr>
+   <td align="center" valign="center"><IMG SRC="01.gif" HEIGHT=154 WIDTH=212></td>
+   <td align="center" valign="center"><IMG SRC="02.gif" HEIGHT=172 WIDTH=224></td>
+   <td align="center" valign="center"><IMG SRC="03.gif" HEIGHT=145 WIDTH=219></td>
+</tr><tr>
+   <td align="center" valign="center"><IMG SRC="04.gif" HEIGHT=146 WIDTH=210></td>
+   <td align="center" valign="center"><IMG SRC="05.gif" HEIGHT=173 WIDTH=247></td>
+   <td align="center" valign="center"><IMG SRC="06.gif" HEIGHT=160 WIDTH=211></td>
+</tr><tr>
+   <td align="center" valign="center"><IMG SRC="07.gif" HEIGHT=145 WIDTH=210></td>
+   <td align="center" valign="center"><IMG SRC="08.gif" HEIGHT=145 WIDTH=256></td>
+   <td align="center" valign="center"><IMG SRC="09.gif" HEIGHT=076 WIDTH=208></td>
+</tr><tr>
+   <td align="center" valign="center"><IMG SRC="11.gif" HEIGHT=145 WIDTH=248></td>
+   <td align="center" valign="center"><IMG SRC="12.gif" HEIGHT=091 WIDTH=200></td>
+   <td align="center" valign="center">&nbsp;</td>
+</tr></table>
+
+<p>O Storyboard nada mais é do que uma história em quadrinhos com as cenas do seu jogo.
+Através desses desenhos você terá uma visão muito mais detalhada de como o jogo será feito,
+e dados como posicionamento de câmeras, posição dos personagens, sequências de animação 
+e até mesmo alguns diálogos.
+
+<P>Essa parte do projeto é meio mecânica e braçal, mas é também fundamental para uma boa
+se ter uma idéia do que será necessário fazer na próxima etapa da criação do jogo.
+
+<b>Documentação técnica</b>
+
+<P>A documentação técnica necessária nessa parte, consiste em fluxograma da história, banco
+de diálogos e mapa de cenários.
+
+<p>
+<table width="100%"><tr><td>
+   <img src="fluxo.gif" align="left" border="0">
+</td><td valign="top">
+   <b>Fluxograma da história</b> - A melhor coisa dos jogos para computador, sem dúvida é a
+   possibilidade do jogador interagir com a história. Isso permite que a história não tenha só o
+   fluxo linear de acontecimentos (começo/meio/fim). Para esses casos, onde o jogo não segue um
+   fluxo linear, às vezes torna-se necessário um a criação de um fluxograma, para que possamos
+   saber se nosso roteiro não tem alguma falha que tenha passado pela revisão de roteiro básico,
+   ou para nos ajudar na fase de codificação da aventura.
+</td></tr></table>
+
+<p>
+<table width="100%"><tr><td width="50%">
+   <table width="100%" border="1" cellpadding="2" cellspacing="0">
+      <tr><td>001</td><td>Olá, tudo bem?</td></tr>
+      <tr><td>002</td><td>Tudo jóia...</td></tr>
+      <tr><td>003</td><td>Onde posso encontrar o mapa da mina?</td></tr>
+      <tr><td>004</td><td>Evidentemente é no lugar marcado com um X.</td></tr>
+      <tr><td>005</td><td>Eu não quero falar sobre isso.</td></tr>
+      <tr><td>006</td><td>Meu nome é Guybrush Treepwood.</td></tr>
+      <tr><td>007</td><td>Não aconteceu nada.</td></tr>
+      <tr><td>008</td><td>Não seria uma boa idéia apertar esse botão vermelho.</td></tr>
+      <tr><td>009</td><td>Eu não sei como funciona isso.</td></tr>
+   </table>
+</td><td valign="top">
+   <b>Banco de Diálogos</b> - Tendo o roteiro avançado em mãos, deveremos anotar todos as falas
+   de todos os personagens em um banco de diálogos. Isso nos ajudará a desenvolver o jogo e
+   evitará que diálogos redundantes ocupe memória do computador. Ajudará também no caso de
+   nosso jogo precisar ser traduzido para outros idiomas. Todo tipo de texto deverá ser colocado
+   aqui e na codificação, deveremos nos referenciar ao código do diálogo para imprimir os textos
+   na tela. Podemos colocar nesse banco de dados as falas digitalizadas dos personagens caso seu
+   jogo seja dublado.
+</td></tr></table>
+
+<p>
+<table width="100%"><tr><td width="50%" align="center">
+   <img src="mapa1.gif">
+</td><td valign="top">
+   <b>Mapa de Cenários</b> - Em determinados jogos, o roteiro não passa de um mapa de
+   cenários. Isso mostra a importância dessa documentação em qualquer jogo. Se seu jogo for um
+   adventure, esse mapa mostrará qual sala levará a qual sala.
+</td></tr></table>
+
+<P>Terminado tudo isso, se voc&ecirc; ainda n&atilde;o estiver louco e com pilhas de pap&eacute;is monstruosas poderemos partir para a pr&oacute;xima etapa: o Projeto.</P>
+
+<h4>O Projeto</h4>
+
+<p><b>Gráficos</b>
+
+<p>Os ilustradores agora terão um trabalhão pela frente. De posse de toda a papelada de roteiros,
+rascunhos de cenários, personagens e começa a desenhar o jogo e criar as animações.
+
+<p><table align="center" border="0" cellpadding="2" cellspacing="0"><tr><td>
+   <img src="monk1.jpg" width="640">
+</td></tr><tr><td class="legenda">
+   Ilustração usada na criação do jogo Monkey Island II
+</td></tr></table>
+
+<p>Os métodos para isso variam de acordo como o ilustrador, mas o processo mais utilizado hoje
+em dia, consiste em criar o traçado da arte no papel, digitalizar (ou scannear como preferir) e
+colorir no computador. Já as animações serão feitas quadro a quadro utilizando uma ferramenta de
+animação, ou digitalizando-as uma a uma manualmente.
+
+<p><table align="center" border="0" cellpadding="2" cellspacing="0"><tr><td>
+   <img src="monk2.jpg" width="640">
+</td></tr><tr><td class="legenda">
+   Ilustração usada na criação do jogo Monkey Island II
+</td></tr></table>
+
+<p>As ferramentas de animação (cell animation) são poucas e caras, devido a isso, muitas vezes
+a animação manual torna-se mais viável economicamente.
+
+<p>Para jogos em 3D, o ilustrador dispõe de mais ferramentas para a criação de animações e
+cenários. E o projeto já pode ser feito diretamente na máquina.
+
+<p class="aviso">colocar imagem do criador de fase do Descent</div>
+
+<p>Os ilustradores deverão nessa etapa criar todos os cenário, animações, personagens e
+movimento de personagens utilizados em todo o jogo. As imagens deverão seguir algumas
+instruções dos programadores do projetos. Essas especificações deverão incluir: Paleta, Cores,
+Tamanho da imagens entre outras. Se a equipe de programadores já desenvolveu alguma ferramenta
+para esse trabalho, essas deverão ser usadas.
+
+<p><b>Sons</b>
+
+<P>O som de um jogo de computador divide-se em 2 ou 3 partes dependendo do tipo do jogo.
+São elas:
+
+<UL>
+   <LI><b>Trilha Sonora</b> - Uma das coisas que eu pessoalmente acho mais importante num bom
+       jogo de computador é a sua trilha sonora. Ela deve ser constante, isto é,  não parar em
+       nenhum momento durante o jogo. Ela que cria o suspense, a emoção, a tensão, ou até mesmo
+       o relaxamento durante uma partida.
+   <LI><b>Efeitos Sonoros</b> - São os barulhos de tiro, explosões, motores e outros que
+       aparecerem no decorrer da partida. Deve-se tomar cuidado com efeitos sonoros muito
+       repetitivos ou demasiado longos, isso pode causar uma certa irritação.
+   <LI>Diálogos - essa terceira parte na composição dos sons de um jogo é composta pelas falas
+       e dublagem dos personagens. Deve cuidar muito da sincronização dos movimentos labiais do
+       personagem e da pronúncia das palavras. Essa parte é opcional e pode fazer parte dos
+       efeitos sonoros.
+</UL>
+
+<p>Se a equipe de desenvolvimento já tiver uma ferramenta de criação de sons, essa deverá ser
+usada.
+
+<p><b>Programação</b>
+
+<p>Os programadores ainda não estarão criando o jogo propriamente dito nessa etapa. Eles estarão
+ocupados em desenvolver as ferramentas para os músicos e os artistas gráficos utilizarem em seu
+trabalho.
+
+<p>Eles também já estarão desenvolvento formatos e estruturas de arquivo para as imagens e sons.
+
+<p>Defino essa fase como "Ponto sem volta", porque só os loucos (por jogos) chegam até o fim
+dessa etapa. E se chegaram até aqui e não ficaram com nenhuma sequela por isso, só nos resta
+prosseguir. É nessa hora que você pergunta: "Porque que eu não fiquei apenas jogando???".
+
+<p>À partir daqui poderemos apenas andar pra frente, porque já passamos do meio, e voltar agora
+significa andar muito mais. E se todos os participantes do projeto já passaram por todas as
+brigas e discussões, falta apenas uma coisa: terminar.
+
+<h4>Codificação</h4>
+
+<p><b>Engenharia Software</b>
+
+<P>Nessa fase, vamos carpir a grama, nivelar o terreno e contruir os alicerces para os
+programadores entrarem em ação.
+
+<P>Aqui nós temos que nos preocupar com a implementação de todas as informações que temos para
+a linguagem do computador. Iremos discutir um a um os seguintes tópicos: Gráficos, Som e Textos.
+
+<p><b>Gráficos</b>
+
+<p>Precisaremos definir formatos de gráficos para o nosso jogo. Nos jogos de computador, temos
+diversas maneira de trabalhar com imagens. Entre os métodos utilizados para a geração de
+imagens na tela do computador podemos enumerar os seguintes:
+
+<UL>
+   <LI><b>Gráficos 3D</b> - Muito utilizados atualmente, os gráficos 3D tentam simular 
+       visualmente a realidade. Contamos hoje com equipamentos aceleradores 3D que se utilizam
+       da mais moderna tecnologia em hardware para tornar o trabalho de quem utiliza gráficos
+       3D muito mais fácil. Essas placas trabalham com técnicas de renderização (processo de
+       transformação de uma imagem vetorial <i>wireframe</i> em uma imagem real com texturas,
+       iluminação, sombras e replexo) como a Ray-tracing que permite criar imagens de alta
+       qualidade. Existem algumas adaptações para essas técnicas que a tornam muito mais rápidas,
+       mas a explicação desse tema demandaria outro livro completo. Veja no apêncice B uma
+       bibliografia mais detalhada sobre esse tema.
+   <LI><b>Animação 3D</b> - Antigamente esse tipo de animação não poderia ser criada em computadores
+       domésticos devido à demanda de velocidade de processamento das técnicas de renderização.
+       Hoje com a atual tecnologia e as ferramentas de software disponíveis, esse tipo de
+       trabalho de animação tornou-se uma das mais fáceis de serem feitas. Uma técnica
+       interessante para se obter movimentos realistas em animações 3D, consiste em filmar
+       atores reais efetuando um determinado movimento, e fazer o computador reproduzir o 
+       mesmo movimento.
+   <LI><b>Sprites</b> - Uma das técnicas mais antigas para se criar gráficos, os sprites
+       consistem em imagens (estáticas ou animadas) pré-definidas e com um canal alfa
+       (canal de transparência) que são "plotadas" na tela sem passar por nenhum processo de
+       preparação. Essas imagens são colocadas na tela do computador e necessitam de pouco
+       processamento, tornando-as assim uma solução muito prática e rápida para diversos tipos
+       de jogos.
+   <LI><b>Cell Animation</b> - Animações por células animadas. Derivam do processo tradicional de
+       animação utilizados em desenhos como os dos Estúdios Disney. Normalmente são utilizados 
+       Sprites nesse tipo de animação
+   <LI><b>Imagem estática</b> - Utilizadas em jogos de tabuleiro (como exemplo) trata-se da forma
+       mais simples de se trabalhar com gráficos em jogos de computador.
+   <LI><b>Scroll</b> - Muito utilizado para simular movimentos de "travelling" das câmeras,
+       essa técnica era utilizada também em desenhos animados antigos como os dos "Flintstones"
+       onde a imagem de fundo se repetia quando eles estavam andando de carro pela cidade. Em
+       conjunto com a técnica de Sprite, jogos do tipo arcade podem ser facilmente criados.
+   <LI><b>Ciclo de Paleta</b> - Uma técnica interessante que quando utilizada com outras
+       técnicas de animações podem criar efeitos muito interessantes e até mesmo psicodélicos.
+       Trata-se de modificar as cores da tela afim de criar uma animação como a de uma explosão.
+</UL>
+
+<P>Exitem outras dezenas de técnicas para a utilização de gráficos para computador, mas muitas
+delas tratam apenas de implementações mais eficientes ou variações dessas descritas acima.
+
+<P><b>Sons</b>
+
+
+Existem algumas técnicas para a sincronização da trilha sonora com os eventos ocorridos
+durante o jogo. Esse detalhe que parece bobo, é muito utilizado quando, por exemplo, queremos
+causar algum suspense numa determinada cena.
+
+Uma técnica interessante que vem se utilizando principalmente em jogos 3D é o som 3D, que faz
+com que o jogador possa distinguir a posição de onde vem os ruídos (do inimigo por exemplo).
+
+<P>Textos</P>
+
+<P>&#9;Defini essa parte como texto, mas ela abrange muito mais do que isso, ela abrange tamb&eacute;m a forma como seu jogo vai se comportar aos comandos do jogador, como ser&aacute; sua estrutura de comandos, como funcionara o seu jogo.</P>
+
+<P>&nbsp;</P></FONT></BODY>
+</HTML>

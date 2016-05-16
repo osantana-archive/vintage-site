@@ -1,0 +1,194 @@
+<html>
+<head>
+   <title>aCiDBaSe HoMe PaGe - E agora, que linguagem?</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1>E agora, que linguagem?</h1>
+<p>por Osvaldo Santana Neto <tt>&lt;<a href="mailto:acidbase@bigfoot.com">acidbase@bigfoot.com</a>&gt;</tt></p>
+
+<p>Ap&oacute;s ler o artigo anterior voc&ecirc;s devem estar se perguntando: T&aacute;, e agora, tenho todo o material para come&ccedil;ar o desenvolvimento de um jogo, mas como devo proceder? &Eacute; exatamente isso que esse artigo vai tentar esclarecer.</p>
+<p>Armado com um calhama&ccedil;o de pap&eacute;is, desenhos, rascunhos e id&eacute;ias para o seu jogo chegou a t&atilde;o esperada hora de codificar. N&atilde;o, calma, ainda n&atilde;o. Chegou a hora de estruturar o seu programa, suas bibliotecas, e escolher a melhor linguagem de programa&ccedil;&atilde;o para codificar.</p>
+<p>Os conceitos de estrutura&ccedil;&atilde;o de um programa ficam um pouco fora do escopo desse artigo, e poder&atilde;o ser descritos em artigos posteriores. O que iremos explicar aqui &eacute; exatamente como escolher uma linguagem de programa&ccedil;&atilde;o.</p>
+<p>Como voc&ecirc;s devem saber, a tarefa de desenvolver um jogo exige um bom conhecimento de programa&ccedil;&atilde;o. Posso at&eacute; dizer que um bom programador de jogos conhecer um pouco de cada uma das t&eacute;cnicas de programa&ccedil;&atilde;o existentes at&eacute; hoje.</p>
+<p>Para facilitar a decis&atilde;o do programador na escolha de uma linguagem de programa&ccedil;&atilde;o, irei descrever as vantagens e desvantagens das linguagens mais usadas (e suas varia&ccedil;&otilde;es) no desenvolvimento de jogos para computador.</p>
+
+<h2>Pascal</h2>
+
+<p>&Eacute; uma linguagem que surgiu a partir do Algol e foi desenvolvida por Niklaus Wirth em um computador CDC 6600 entre 1967-68 como uma ferramenta para ser usada no ensino de programa&ccedil;&atilde;o. Esta linguagem foi inicialmente criada para ajudar a estudantes no aprendizado de programa&ccedil;&atilde;o, mas futuramente foi transformada em uma linguagem para desenvolvimento de programas gen&eacute;ricos. O Pascal faz parte da mesma fam&iacute;lia das linguagens Modula-2 e Ada. Deixando a hist&oacute;ria um pouco de lado, o Pascal &eacute; uma linguagem compilada, ou seja, o programa feito em Pascal &eacute; convertido (compilado) para c&oacute;digo de m&aacute;quina por um compilador.</p>
+<p>Pascal &eacute; uma linguagem fortemente tipada, ou seja, ela for&ccedil;a o programador a declarar vari&aacute;veis com o tipo de dado que ela realmente ir&aacute; armazenar. Para que isso funcione o Pascal tem que manter uma checagem de erros em tempo de execu&ccedil;&atilde;o. Em resumo: Se voc&ecirc; declara que uma vari&aacute;vel s&oacute; receber&aacute; valores inteiros, o Pascal n&atilde;o permitir&aacute; que um valor de ponto flutuante seja atribuido a ela.</p>
+<p>Recentemente foi criada uma extens&atilde;o &agrave; linguagem Pascal chamada Object Pascal, que acrescentou suporte a OOP (Programa&ccedil;&atilde;o Orientada a Objetos). Os compiladores Pascal mais conhecidos s&atilde;o:</p>
+<ul>
+	<li><b>Borland Pascal 7.0</b> - &Uacute;ltima vers&atilde;o do compilador Pascal da Borland que gerava c&oacute;digo para DOS (apesar de tamb&eacute;m possuir algum suporte a API Windows). Possui suporte a programa&ccedil;&atilde;o orientada &agrave; objetos.</li>
+	<li><b>Delphi</b> - Compilador Pascal que gera c&oacute;digo 32bits e possui um &oacute;timo suporte &agrave; API do Windows, mas tamb&eacute;m compila programas para WinDOS (DOS com suporte a DPMI). &Eacute; muito utilizado para gerar aplicativos comerciais para Windows. &Eacute; uma linguagem visual.</li>
+	<li><b>Free Pascal Compiler</b> - Particularmente acho esse o mais interessante de todos. Ele &eacute; totalmente compat&iacute;vel com o Borland Pascal 7.0 e gera c&oacute;digo para diversos sistemas operacionais diferentes como: Linux, Windows e Amiga. E o melhor de tudo: &eacute; free, ou seja, pode ser obtido no site e copiado livremente. O site? http://www.freepascal.org</li>
+</ul>
+<p>Todos esses compiladores permitem que as op&ccedil;&otilde;es de checagem em tempo de execu&ccedil;&atilde;o sejam desabilitadas.</p>
+<p><b>Vantagens:</b> &Eacute; de f&aacute;cil aprendizado. For&ccedil;a o programador a manter c&oacute;digos bem feitos. O C&oacute;digo do Pascal &eacute; de f&aacute;cil interpreta&ccedil;&atilde;o. Possui uma vasta documenta&ccedil;&atilde;o.</p>
+<p><b>Desvantagens:</b> Possue um desempenho baixo devido ao seu sistema de checagem de erro em tempo de execu&ccedil;&atilde;o. N&atilde;o possue muitas bibliotecas para trabalho com gr&aacute;ficos, sons ou outros tipos de hardware.</p>
+
+<p><b>Exemplo:</b> (Colocarei um exemplo de c&oacute;digo para cada linguagem)</p>
+<pre>
+{ Programinha }
+Program Programinha;
+
+Uses Crt;
+
+Var Km : Integer;
+
+Begin
+   For Km := 550 Downto 1 do Begin
+      Writeln(Km,' kil&ocirc;metros, pare um pouquinho, 
+              descanse um pouquinho, ',Km,' kil&ocirc;metros');
+   End;
+End.
+</pre>
+
+<h2>C/C++</h2>
+
+<p>Linguagem de programa&ccedil;&atilde;o criada por Dennis Ritchie e Brian Kernnigan durante a d&eacute;cada de 70 e usada para implementar o sistema operacional UNIX. Recebeu esse nome porqu&ecirc; ela se originou da linguagem B, que por sua vez se originou da BCPL que veio de uma variante do Algol. Bjarne Stroustrup acrecentou suporte &agrave; programa&ccedil;&atilde;o orientada a objeto ao C e criou o C++. A linguagem C &eacute; largamente utilizada no desenvolvimento de sistemas operacionais e jogos de computadores.</p>
+<p>Algumas pessoas dizem que a linguagem C fica entre o Pascal e a linguagem Assembly. Como o Pascal, a linguagem C tamb&eacute;m &eacute; compilada. Mas C n&atilde;o &eacute; uma linguagem fortemente tipada. Isso significa que voc&ecirc; pode dizer que uma vari&aacute;vel deve receber um valor inteiro e atribuir (por sua conta e risco) um valor de ponto flutuante. Existem dezenas de compiladores C/C++ entre eles:</p>
+<ul>
+	<li><b>Borland C/C++ 4.5</b> - &Uacute;ltima vers&atilde;o para DOS do compilador C da Borland, funcionava de forma muito semelhante ao Borland Pascal 7.0 gerando c&oacute;digo para DOS mas apresentando tamb&eacute;m algum suporte ao Windows.</li>
+	<li><b>GCC GNU C Compiler</b> - Compilador C/C++ da GNU (GNU is not Unix). &Eacute; um compilador muito poderoso e possui vers&otilde;es para diversas plataformas. Tamb&eacute;m &eacute; um software free e pode ser obtido atrav&eacute;s de download no site: <a href="http://gcc.gnu.org">http://gcc.gnu.org</a>. A vers&atilde;o para DOS/Win pode ser obtida em: <a href="http://www.delorie.com">http://www.delorie.com</a></li>
+	<li><b>C++ Builder</b> - Semelhante ao Delphi, mas compila c&oacute;digos em C/C++. &Eacute; uma linguagem visual.</li>
+</ul>
+<p><b>Vantagens:</b> Gera c&oacute;digos muito r&aacute;pidos. Possui vasta documenta&ccedil;&atilde;o e um n&uacute;mero consider&aacute;vel de bibliotecas para desenvolvimento de jogos (como a Allegro).</p>
+<p><b>Desvantagens:</b> N&atilde;o tem um c&oacute;digo fonte muito agrad&aacute;vel de se ler. O aprendizado &eacute; mais complicado que Pascal. Em Sistemas Operacionais ruins, como o Windows :), pode causar crashs no sistema.</p>
+
+<p>Exemplo:</p>
+
+<pre>
+/* Programinha */
+#include<stdio.h>
+
+int main(void)
+{
+   int km;
+   for(km = 550; km >= 1; km--) {
+      printf("%d kil&ocirc;metros, para um pouquinho, 
+               descansa um pouquinho %d kil&ocirc;metros.\n",km,km-1);
+   }
+}
+</pre>
+
+<h2>Basic</h2>
+
+<p>O BASIC (Beginner's All-purpose Symbolic Instruction Code) foi uma linguagem criada com o prop&oacute;sito de ensinar programa&ccedil;&atilde;o nas escolas americanas. Por&eacute;m, por n&atilde;o ser uma linguagem estruturada, permitia que os estudantes desenvolvessem programas de m&aacute; qualidade e aprendessem t&eacute;cnicas de programa&ccedil;&atilde;o n&atilde;o muito "elegantes".</p>
+<p>Inicialmente o BASIC era uma linguagem interpretada, o primeiro compilador BASIC foi criado pela Microsoft ap&oacute;s ter modificado (como ela sempre faz) a linguagem de forma a ficar parecida com uma linguagem estruturada.</p>
+<p>Existe apenas um compilador que merece ser citado, apesar da enorme quantidade de interpretadores BASIC dispon&iacute;veis no mercado (entre solu&ccedil;&otilde;es comerciais e de software livre).</p>
+<ul>
+	<li><b>Visual Basic</b> - Compilador da Microsoft que gera c&oacute;digo apenas para Win32. Como o nome j&aacute; diz, tamb&eacute;m &eacute; uma linguagem visual.</li>
+</ul>
+<p><b>Vantagens:</b> F&aacute;cil aprendizagem.</p>
+<p><b>Desvantagens:</b> Permite que o programador use t&eacute;cnicas n&atilde;o muito "elegantes" de programa&ccedil;&atilde;o. Mesmo com c&oacute;digo compilado, &eacute; uma linguagem lenta.</p>
+
+<p>Exemplo:</p>
+
+<pre>
+10 ' Esse c&oacute;digo servir&aacute; para linguagens interpretadas
+20 ' A numera&ccedil;&atilde;o de linha j&aacute; n&atilde;o &eacute; necess&aacute;ria em alguns dialetos BASIC
+30 FOR KM=550 TO 0 STEP -1
+40  PRINT KM,"km, para um pouquinho, descanse um pouquinho, ",KM-1,"km"
+50 NEXT KM
+60 END
+</pre>
+
+<h2>Assembly</h2>
+
+<p>Assembly n&atilde;o &eacute; necessariamente uma linguagem de programa&ccedil;&atilde;o. Assembly &eacute; chamada de linguagem de montagem. Ela possui um conjunto de instru&ccedil;&otilde;es mnem&ocirc;nicas que variam de plataforma para plataforma, que s&atilde;o convertidas em c&oacute;digo de m&aacute;quina por um programa chamado Assembler. Por ser convertida em linguagem de m&aacute;quina, ela apresenta um desempenho espantoso se comparado a uma linguagem de programa&ccedil;&atilde;o comum. Em contrapartida, um programa desenvolvido para uma plataforma X, certamente n&atilde;o funcionar&aacute; em uma plataforma Y.</p>
+<p>Existem centenas de compiladores (montadores) Assembly para centenas de plataformas diferentes, por esse motivo, citarei alguns compiladores Assembly conhecidos para a plataforma x86 que, acredito, &eacute; uma das mais comuns hoje.</p>
+<ul>
+	<li><b>TASM</b> - Turbo Assembler da Borland, &eacute; um programa que faz parte dos pacotes de desenvolvimento da Borland (Turbo Pascal/Borland C/C++) que, na minha opini&atilde;o, &eacute; a melhor produtora de compiladores comerciais existente.</li>
+	<li><b>MASM</b> - Macro Assembler &eacute; o montador da Microsoft e tamb&eacute;m faz parte dos pacotes de desenvolvimento da mesma.</li>
+	<li><b>A86</b> - Assembler 86 &eacute; um compilador Free que gera c&oacute;digo 16bits e possui mais algumas ferramentas para desenvolvimento em Assembly.</li>
+	<li><b>AS</b> - Assembler que faz parte do pacote GCC da GNU.</li>
+</ul>
+<p><b>Vantagens:</b> MUITO r&aacute;pida.</p>
+<p><b>Desvantagens:</b> Torna o programa depende de plataforma. Dif&iacute;cil aprendizado.</p>
+
+<p>Exemplo:</p>
+<p>Por depender muito de Sistema Operacional e da plataforma, n&atilde;o colocarei o exemplo utilizado nas outras linguagens. No lugar colocarei um exemplo simples de "Hello World!" que pode ser compilado no A86 e ser rodado em WinDOS.</p>
+
+<pre>
+; Programinha Hello World!
+
+ORG 100H
+
+INICIO: JMP START
+
+MSG db 'Hello World!',13,10,'$'
+
+START: MOV AH, 09H
+       MOV DX, OFFSET MSG
+       PUSH CS
+       POP ES
+       INT 21H
+       MOV AX, 04C00H
+       INT 21H
+
+END INICIO
+</pre>
+
+<h2>Linguagens Script</h2>
+
+<p>Com o advento da Internet as linguagens Script tiveram uma ascens&atilde;o not&aacute;vel e merecem ser citadas nesse artigo. As linguagens Script s&atilde;o em sua grande maioria interpretadas, e s&atilde;o usadas principalmente na cria&ccedil;&atilde;o de sites din&acirc;micos para a Internet, ou para Intranets. As linguagens Script mais conhecidas s&atilde;o: Perl, Python, sh e suas variantes, e TCL. Todas essas possuem vers&otilde;es Free para sistemas operacionais Posix. Algumas delas, como Perl, possuem tamb&eacute;m vers&otilde;es para Windows.</p>
+<p>Na produ&ccedil;&atilde;o de jogos s&oacute; s&atilde;o recomendadas para cria&ccedil;&atilde;o de programas que n&atilde;o exigem alto desempenho.</p>
+
+<p><b>Vantagens:</b> S&atilde;o de f&aacute;cil aprendizado.</p>
+<p><b>Desvantagens:</b> S&atilde;o lentas.</p>
+
+<p>Exemplo: (colocarei um exemplo em Python que &eacute; a &uacute;nica que eu conhe&ccedil;o :) )</p>
+
+<pre>
+#!/usr/bin/python
+# Programinha
+
+for km in range(550, 1, -1) :
+	print km," km, para um pouquinho, descansa um pouquinho, ",km," km."
+</pre>
+
+<h2>Conclus&otilde;es</h2>
+
+<p>Nesse ponto voc&ecirc; j&aacute; conhece algumas caracter&iacute;sticas de v&aacute;rias linguagens de programa&ccedil;&atilde;o e j&aacute; deve ter chegado a alguma conclus&atilde;o sobre qual linguagem deve ser escolhida para o desenvolvimento do seu jogo.</p>
+<p>Os pontos que devem ser considerados na escolha de uma linguagem de programa&ccedil;&atilde;o s&atilde;o:</p>
+
+<h3>Tipo de jogo</h3>
+<p>Fator principal na hora da escolha. Se voc&ecirc; vai desenvolver um jogo com engine 3D que precisar&aacute; renderizar v&aacute;rios frames por segundo, n&atilde;o seria adequado escolher uma linguagem interpretada. J&aacute; se voc&ecirc; vai fazer um jogo de dama, nada impede que voc&ecirc; use at&eacute; mesmo uma linguagem Script.</p>
+
+<h3>Conhecimento de programa&ccedil;&atilde;o</h3>
+<p>&Eacute; evidente que o fator "experi&ecirc;ncia com a linguagem" deve ser considerado na escolha da melhor linguagem.</p>
+
+<h3>Disponibilidade de ferramentas</h3>
+<p>Nem sempre reinventar a roda &eacute; um bom neg&oacute;cio, portanto, se uma linguagem j&aacute; disp&otilde;es de ferramentas, bibliotecas e outras coisas utilizadas no desenvolvimento de jogos, isso deve ser levado em considera&ccedil;&atilde;o.</p>
+
+<h3>H&iacute;bridos</h3>
+<p>Se uma linguagem pode se comunicar com outras, isso a torna muito interessante. Essa t&eacute;cnica de misturar v&aacute;rias linguagens no desenvolvimento &eacute; muito &uacute;til para a cria&ccedil;&atilde;o de jogos. Imagine que voc&ecirc; est&aacute; desenvolvendo um jogo em C, mas as rotinas de tratamento de v&iacute;deo n&atilde;o est&atilde;o desempenhando bem essa fun&ccedil;&atilde;o (e acredite, isso acontece muito), pode ser interessante criar rotinas em Assembly para tratar dessas tarefas.</p>
+
+<h2>Recomenda&ccedil;&otilde;es</h2>
+<p>Nesse bloco, farei algumas recomenda&ccedil;&otilde;es sobre que linguagem de programa&ccedil;&atilde;o usar para alguns tipos de jogo:</p>
+
+<table width="100%" border="1" cellspacing="0" cellpadding="2" bordercolor="#000000"><tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr bgcolor="#DDDDDD"><td>3D</td><td>C com Assembly</td></tr>
+<tr><td>Adventure Gr&aacute;fico</td><td>C/C++ com Assembly</td></tr>
+<tr bgcolor="#DDDDDD"><td>Adventure Texto</td><td>Linguagem Script</td></tr>
+<tr><td>RPG Gr&aacute;fico</td><td>C/C++ ou Pascal</td></tr>
+<tr bgcolor="#DDDDDD"><td>RPG Texto</td><td>Linguagem Script</td></tr>
+<tr><td>Trivia</td><td>Linguagem Script</td></tr>
+<tr bgcolor="#DDDDDD"><td>Tabuleiro Gr&aacute;fico</td><td>Pascal</td></tr>
+<tr><td>Tabuleiro Texto</td><td>Pascal</td></tr>
+<tr bgcolor="#DDDDDD"><td>Arcade</td><td>C com Assembly</td></tr>
+<tr><td>Luta</td><td>C com Assembly</td></tr>
+<tr bgcolor="#DDDDDD"><td>Simuladores</td><td>C com Assembly</td></tr>
+<tr><td>Estrat&eacute;gia Gr&aacute;ficos</td><td>C/C++ com Assembly</td></tr>
+<tr bgcolor="#DDDDDD"><td>EAstrat&eacute;gia Texto</td><td>Pascal</td></tr>
+</table>
+</table>
+<p>Mas lembrem-se que isso s&atilde;o apenas recomenda&ccedil;&otilde;es, tendo visto que j&aacute; v&iacute; at&eacute; engines 3D rodando em Java. Portando, n&atilde;o se prendam a uma &uacute;nica linguagem, explore as vantagens de cada uma delas and... <b>FIGHT!</b></p>
+<hr>
+<p>Alguns trechos desse artigo foram traduzidos do Jargonfile que pode ser obtido em <a href="http://avatar.deva.net">http://avatar.deva.net</a> ou nas <a href="http://www.conectiva.com.br">melhores distribuições Linux do ramo<a>.</p>
+
+</body>
+</html>
+
